@@ -1,0 +1,30 @@
+version: "3.7"
+
+services:
+  frontend:
+    image: instapound_frontend
+    container_name: instapound-frontend
+    build:
+      context: ./frontend
+      dockerfile: dev.Dockerfile
+    volumes:
+      - ./frontend:/frontend
+      - /frontend/node_modules
+    networks:
+      - frontend
+
+  nginx:
+    image: instapound_nginx
+    container_name: instapound-nginx
+    build:
+      context: ./nginx
+    ports:
+      - 4200:80
+    restart: always
+    depends_on:
+      - frontend
+    networks:
+      - frontend
+
+networks:
+  frontend:
