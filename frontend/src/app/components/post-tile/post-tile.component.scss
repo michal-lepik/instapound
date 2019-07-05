@@ -1,0 +1,60 @@
+.post {
+    display: flex;
+    flex-direction: column;
+    width: 40rem;
+    margin-bottom: 4rem;
+    background-color: white;
+}
+
+.header {
+    display: flex;
+    border: 0.5px solid lightgray;
+    border-top-left-radius: 0.2rem;
+    border-top-right-radius: 0.2rem;
+}
+
+.logo {
+    background-position: center;
+    background-size: cover;
+    border-radius: 50%;
+    width: 2.5rem;
+    margin: 0.8rem;
+}
+
+.author {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.username {
+    font-weight: bold;
+}
+
+.location {
+    font-size: 14px;
+}
+
+.options {
+    display: flex;
+
+    font-size: 30px;
+    margin-left: auto;
+    margin-right: 2rem;
+
+    align-items: center;
+}
+
+.picture {
+    height: 32rem;
+    background-image: url('https://picsum.photos/600/');
+    background-size: cover;
+    border-left: 0.5px solid lightgray;
+    border-right: 0.5px solid lightgray;
+}
+
+.description {
+    border: 0.5px solid lightgray;
+    border-bottom-left-radius: 0.2rem;
+    border-bottom-right-radius: 0.2rem;
+}

@@ -1,0 +1,10 @@
+.header {
+    position: sticky;
+    top: 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 4rem;
+    background-color: white;
+    border-bottom: 0.5px solid lightgray;
+}
