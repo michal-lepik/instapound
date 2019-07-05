@@ -6,7 +6,8 @@ COPY ./package-lock.json ./
 COPY ./package.json ./
 COPY ./angular.json ./
 
-RUN npm install && npm install -g @angular/cli@8.0.1
+RUN npm install -g @angular/cli@8.0.1
+RUN npm install
 
 COPY . .
 
