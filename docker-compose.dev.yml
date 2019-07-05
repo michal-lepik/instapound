@@ -1,0 +1,9 @@
+version: "3.7"
+
+services:
+  frontend:
+    build:
+      dockerfile: dev.Dockerfile
+    volumes:
+      - ./frontend:/frontend:delegated
+      - /frontend/node_modules
