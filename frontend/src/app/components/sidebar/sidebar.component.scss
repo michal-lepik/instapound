@@ -4,5 +4,71 @@
     margin: 0 1rem;
     width: 22rem;
     height: 35rem;
-    background-color: blue;
+}
+
+.account {
+    display: flex;
+
+    .avatar {
+        background-position: center;
+        background-size: cover;
+        border: 0.5px solid lightgray;
+        border-radius: 50%;
+        width: 3rem;
+    }
+
+    .user {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin-left: 1rem;
+    }
+
+    .username {
+        font-weight: bold;
+    }
+
+    .name {
+        font-size: 14px;
+        color: gray;
+    }
+}
+
+.stories {
+    margin: 1rem 0;
+    padding: 1rem;
+    background-color: white;
+    border: 0.5px solid lightgray;
+    border-radius: 0.2rem;
+}
+
+.suggestions {
+    margin: 1rem 0;
+    padding: 1rem;
+    background-color: white;
+    border: 0.5px solid lightgray;
+    border-radius: 0.2rem;
+}
+
+.footer {
+    font-size: 0.8rem;
+    color: gray;
+    text-transform: capitalize;
+    display: flex;
+    flex-wrap: wrap;
+    line-height: 1.2rem;
+
+    li {
+        display: inline;
+        transition: color 0.5s ease;
+
+        &:after {
+            content: '·';
+            padding: 0 0.5rem;
+        }
+
+        &:last-child::after {
+            content: none;
+        }
+    }
 }
