@@ -1,10 +1,10 @@
 <div class="post">
     <header class="header">
-        <img class="logo" src="https://picsum.photos/45/" />
+        <img class="avatar" src="https://picsum.photos/45/" />
 
         <div class="author">
             <div class="username">username</div>
-            <div class="location">Somewhere nice</div>
+            <div class="location">Location location</div>
         </div>
 
         <div class="options">···</div>
@@ -12,5 +12,32 @@
 
     <div class="picture"></div>
 
-    <div class="description">comments etc</div>
+    <div class="footer">
+        <div class="reactions">
+            <app-reaction-button [path]="'assets/icons/heart.svg'"></app-reaction-button>
+            <app-reaction-button [path]="'assets/icons/comment.svg'"></app-reaction-button>
+            <app-reaction-button [path]="'assets/icons/share.svg'"></app-reaction-button>
+            <app-reaction-button [path]="'assets/icons/bookmark.svg'"></app-reaction-button>
+        </div>
+
+        <div class="counter">1,234 likes</div>
+
+        <div class="comments">
+            <div class="comment">
+                <strong>anotheruser </strong>Bacon ipsum dolor amet venison filet mignon strip steak
+                cupim pig tail shankle ham landjaeger leberkas prosciutto boudin bresaola short ribs
+                meatloaf.
+            </div>
+            <div>
+                <strong>somedude1 </strong>Skate ipsum dolor sit amet, finger flip 720 concave carve Rick
+                McCrank crooked grind hurricane. Risers boned out nose grab no comply transfer crail
+                slide. Hang ten opposite footed pool frontside air rock and roll hang-up.
+            </div>
+        </div>
+
+        <div class="input">
+            <input class="input-field" type="text" placeholder="Add comment" />
+            <button class="submit-button">Post</button>
+        </div>
+    </div>
 </div>

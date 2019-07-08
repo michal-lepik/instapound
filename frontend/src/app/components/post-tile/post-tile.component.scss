@@ -13,7 +13,7 @@
     border-top-right-radius: 0.2rem;
 }
 
-.logo {
+.avatar {
     background-position: center;
     background-size: cover;
     border-radius: 50%;
@@ -37,12 +37,10 @@
 
 .options {
     display: flex;
-
-    font-size: 30px;
+    align-items: center;
+    font-size: 2.4rem;
     margin-left: auto;
     margin-right: 2rem;
-
-    align-items: center;
 }
 
 .picture {
@@ -53,8 +51,57 @@
     border-right: 0.5px solid lightgray;
 }
 
-.description {
+.footer {
+    display: flex;
+    flex-direction: column;
     border: 0.5px solid lightgray;
     border-bottom-left-radius: 0.2rem;
     border-bottom-right-radius: 0.2rem;
+}
+
+.reactions {
+    display: flex;
+
+    & :last-child {
+        margin-left: auto;
+    }
+}
+
+.counter {
+    margin: 0 0.7rem 0.7rem;
+    font-weight: bold;
+}
+
+.comments {
+    margin: 0 0.7rem 0.7rem;
+}
+
+.comment {
+    margin-bottom: 0.7rem;
+}
+
+.input {
+    display: flex;
+    height: 3.5rem;
+    border-top: 0.5px solid lightgray;
+
+    & :focus {
+        outline: none;
+    }
+}
+
+.input-field {
+    border: 0;
+    margin: 1px;
+    flex-grow: 1;
+    padding: 0 1rem;
+}
+
+.submit-button {
+    border: none;
+    padding: 0 1.5rem;
+    background: none;
+    color: rgb(0, 162, 255);
+    font-weight: bold;
+    cursor: pointer;
 }
