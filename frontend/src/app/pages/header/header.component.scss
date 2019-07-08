@@ -1,5 +1,5 @@
 .header {
-    padding: 0 10rem;
+    padding: 0 20rem;
     position: sticky;
     top: 0;
     display: flex;
@@ -8,4 +8,15 @@
     height: 4rem;
     background-color: white;
     border-bottom: 0.5px solid lightgray;
+}
+
+.logo {
+    font-family: 'Satisfy', cursive;
+    font-size: 2rem;
+}
+
+.search {
+    width: 14rem;
+    height: 1.5rem;
+    text-align: center;
 }

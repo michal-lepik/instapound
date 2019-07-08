@@ -7,10 +7,17 @@ import { HomeComponent } from './pages/home/home.component';
 import { HeaderComponent } from './pages/header/header.component';
 import { PostTileComponent } from './components/post-tile/post-tile.component';
 import { SidebarComponent } from './components/sidebar/sidebar.component';
-import { ReactionButtonComponent } from './components/reaction-button/reaction-button.component';
+import { IconButtonComponent } from './components/icon-button/icon-button.component';
 
 @NgModule({
-    declarations: [AppComponent, HomeComponent, HeaderComponent, PostTileComponent, SidebarComponent, ReactionButtonComponent],
+    declarations: [
+        AppComponent,
+        HomeComponent,
+        HeaderComponent,
+        PostTileComponent,
+        SidebarComponent,
+        IconButtonComponent,
+    ],
     imports: [BrowserModule, AppRoutingModule],
     providers: [],
     bootstrap: [AppComponent],
