@@ -1,3 +1,6 @@
+@import 'src/app/styles/variables';
+@import 'src/app/styles/shared';
+
 .sidebar {
     position: sticky;
     top: 8rem;
@@ -12,7 +15,7 @@
     .avatar {
         background-position: center;
         background-size: cover;
-        border: 0.5px solid lightgray;
+        border: $border-thin;
         border-radius: 50%;
         width: 3rem;
     }
@@ -29,30 +32,14 @@
     }
 
     .name {
-        font-size: 14px;
-        color: gray;
+        font-size: $font-size-small;
+        color: $color-gray;
     }
-}
-
-.stories {
-    margin: 1rem 0;
-    padding: 1rem;
-    background-color: white;
-    border: 0.5px solid lightgray;
-    border-radius: 0.2rem;
-}
-
-.suggestions {
-    margin: 1rem 0;
-    padding: 1rem;
-    background-color: white;
-    border: 0.5px solid lightgray;
-    border-radius: 0.2rem;
 }
 
 .footer {
     font-size: 0.8rem;
-    color: gray;
+    color: $color-gray;
     text-transform: capitalize;
     display: flex;
     flex-wrap: wrap;
