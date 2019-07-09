@@ -2,8 +2,6 @@
     <div class="logo">Instapound</div>
     <input class="search" type="text" placeholder="🔎 search" />
     <div class="icons">
-        <app-icon-button [path]="'assets/icons/compass.svg'"></app-icon-button>
-        <app-icon-button [path]="'assets/icons/heart.svg'"></app-icon-button>
-        <app-icon-button [path]="'assets/icons/user.svg'"></app-icon-button>
+        <app-icon-button *ngFor="let button of iconButtons" [path]="button"></app-icon-button>
     </div>
 </header>

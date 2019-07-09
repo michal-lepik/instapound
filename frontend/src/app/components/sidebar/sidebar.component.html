@@ -1,28 +1,16 @@
 <div class="sidebar">
     <div class="account">
-        <img class="avatar" src="https://picsum.photos/46/" />
+        <img class="avatar" src="{{ user.profilePicUrl }}" />
 
         <div class="user">
-            <div class="username">name_surname</div>
-            <div class="name">Name Surname</div>
+            <div class="username">{{ user.username }}</div>
+            <div class="name">{{ user.name }} {{ user.surname }}</div>
         </div>
     </div>
 
     <div class="sidebar-tile">stories</div>
     <div class="sidebar-tile">suggestions</div>
     <div class="footer">
-        <li>cupcake</li>
-        <li>ipsum</li>
-        <li>dolor</li>
-        <li>sit</li>
-        <li>amet</li>
-        <li>muffin</li>
-        <li>jelly</li>
-        <li>halvah</li>
-        <li>powder</li>
-        <li>candy</li>
-        <li>lemon</li>
-        <li>drops</li>
-        <li>croissant</li>
+        <li *ngFor="let item of footerItems">{{ item }}</li>
     </div>
 </div>

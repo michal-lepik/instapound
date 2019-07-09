@@ -5,4 +5,10 @@ import { Component } from '@angular/core';
     templateUrl: './header.component.html',
     styleUrls: ['./header.component.scss'],
 })
-export class HeaderComponent {}
+export class HeaderComponent {
+    private iconButtons = [
+        'assets/icons/compass.svg',
+        'assets/icons/heart.svg',
+        'assets/icons/user.svg',
+    ];
+}

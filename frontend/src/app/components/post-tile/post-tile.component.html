@@ -1,37 +1,31 @@
 <div class="post">
     <header class="header">
-        <img class="avatar" src="https://picsum.photos/45/" />
+        <img class="avatar" src="{{ author.profilePicUrl }}" />
 
         <div class="author">
-            <div class="username">username</div>
-            <div class="location">Location location</div>
+            <div class="username">{{ author.username }}</div>
+            <div class="location">{{ post.location }}</div>
         </div>
 
         <div class="options">···</div>
     </header>
 
-    <div class="picture"></div>
+    <img class="picture" src="{{ post.pictureUrl }}" />
 
     <div class="footer">
         <div class="reactions">
-            <app-icon-button [path]="'assets/icons/heart.svg'"></app-icon-button>
-            <app-icon-button [path]="'assets/icons/comment.svg'"></app-icon-button>
-            <app-icon-button [path]="'assets/icons/share.svg'"></app-icon-button>
-            <app-icon-button [path]="'assets/icons/bookmark.svg'"></app-icon-button>
+            <app-icon-button
+                *ngFor="let button of iconButtons"
+                [path]="button"
+                class="reaction"
+            ></app-icon-button>
         </div>
 
-        <div class="counter">1,234 likes</div>
+        <div class="counter">{{ post.likes }} likes</div>
 
         <div class="comments">
-            <div class="comment">
-                <strong>anotheruser </strong>Bacon ipsum dolor amet venison filet mignon strip steak
-                cupim pig tail shankle ham landjaeger leberkas prosciutto boudin bresaola short ribs
-                meatloaf.
-            </div>
-            <div>
-                <strong>somedude1 </strong>Skate ipsum dolor sit amet, finger flip 720 concave carve Rick
-                McCrank crooked grind hurricane. Risers boned out nose grab no comply transfer crail
-                slide. Hang ten opposite footed pool frontside air rock and roll hang-up.
+            <div *ngFor="let comment of comments" class="comment">
+                <strong>{{ comment.author }} </strong>{{ comment.content }}
             </div>
         </div>
 

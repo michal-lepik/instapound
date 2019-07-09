@@ -48,7 +48,7 @@
 
 .picture {
     height: 32rem;
-    background-image: url('https://picsum.photos/600/');
+    object-fit: cover;
     background-size: cover;
     border-left: $border-thin;
     border-right: $border-thin;
