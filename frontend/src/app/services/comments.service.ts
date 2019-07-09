@@ -1,10 +1,5 @@
-import { Injectable } from '@angular/core';
-
 import { comments } from '../mocks/comments';
 
-@Injectable({
-    providedIn: 'root',
-})
 export class CommentsService {
     getComments() {
         return comments;
