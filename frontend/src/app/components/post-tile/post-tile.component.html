@@ -1,0 +1,37 @@
+<div class="post">
+    <header class="header">
+        <img class="avatar" src="{{ author.profilePicUrl }}" />
+
+        <div class="author">
+            <div class="username">{{ author.username }}</div>
+            <div class="location">{{ post.location }}</div>
+        </div>
+
+        <div class="options">···</div>
+    </header>
+
+    <img class="picture" src="{{ post.pictureUrl }}" />
+
+    <div class="footer">
+        <div class="reactions">
+            <app-icon-button
+                *ngFor="let button of iconButtons"
+                [path]="button"
+                class="reaction"
+            ></app-icon-button>
+        </div>
+
+        <div class="counter">{{ post.likes }} likes</div>
+
+        <div class="comments">
+            <div *ngFor="let comment of comments" class="comment">
+                <strong>{{ comment.author }} </strong>{{ comment.content }}
+            </div>
+        </div>
+
+        <div class="input">
+            <input class="input-field" type="text" placeholder="Add comment" />
+            <button class="submit-button">Post</button>
+        </div>
+    </div>
+</div>

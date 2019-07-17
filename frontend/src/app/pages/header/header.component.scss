@@ -1,0 +1,26 @@
+@import 'src/app/styles/variables';
+
+.header {
+    padding: 0 20rem;
+    position: sticky;
+    top: 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 4rem;
+    background-color: $color-white;
+    border-bottom: $border-thin;
+}
+
+.logo {
+    font-family: $font-satisfy;
+    font-size: $font-size-big;
+}
+
+.search {
+    width: 14rem;
+    height: 1.7rem;
+    text-align: center;
+    border: $border-thin;
+    background: $color-alabaster;
+}

@@ -1,0 +1,61 @@
+@import 'src/app/styles/variables';
+@import 'src/app/styles/shared';
+
+.sidebar {
+    position: sticky;
+    top: 8rem;
+    margin: 0 1rem;
+    width: 22rem;
+    height: 35rem;
+}
+
+.account {
+    display: flex;
+
+    .avatar {
+        background-position: center;
+        background-size: cover;
+        border: $border-thin;
+        border-radius: 50%;
+        width: 3rem;
+    }
+
+    .user {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin-left: 1rem;
+    }
+
+    .username {
+        font-weight: bold;
+    }
+
+    .name {
+        font-size: $font-size-small;
+        color: $color-gray;
+    }
+}
+
+.footer {
+    font-size: 0.8rem;
+    color: $color-gray;
+    text-transform: capitalize;
+    display: flex;
+    flex-wrap: wrap;
+    line-height: 1.2rem;
+
+    li {
+        display: inline;
+        transition: color 0.5s ease;
+
+        &:after {
+            content: '·';
+            padding: 0 0.5rem;
+        }
+
+        &:last-child::after {
+            content: none;
+        }
+    }
+}

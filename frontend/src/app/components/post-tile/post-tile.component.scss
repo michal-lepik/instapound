@@ -1,0 +1,110 @@
+@import 'src/app/styles/variables';
+
+.post {
+    display: flex;
+    flex-direction: column;
+    width: 40rem;
+    margin-bottom: 4rem;
+    background-color: $color-white;
+}
+
+.header {
+    display: flex;
+    border: $border-thin;
+    border-top-left-radius: 0.2rem;
+    border-top-right-radius: 0.2rem;
+}
+
+.avatar {
+    background-position: center;
+    background-size: cover;
+    border: $border-thin;
+    border-radius: 50%;
+    width: 2.5rem;
+    margin: 0.8rem;
+}
+
+.author {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.username {
+    font-weight: bold;
+}
+
+.location {
+    font-size: $font-size-small;
+}
+
+.options {
+    display: flex;
+    align-items: center;
+    font-size: 2.4rem;
+    margin-left: auto;
+    margin-right: 2rem;
+}
+
+.picture {
+    height: 32rem;
+    object-fit: cover;
+    background-size: cover;
+    border-left: $border-thin;
+    border-right: $border-thin;
+}
+
+.footer {
+    display: flex;
+    flex-direction: column;
+    border: $border-thin;
+    border-bottom-left-radius: 0.2rem;
+    border-bottom-right-radius: 0.2rem;
+}
+
+.reactions {
+    display: flex;
+
+    & :last-child {
+        margin-left: auto;
+    }
+}
+
+.counter {
+    margin: 0 0.7rem 0.7rem;
+    font-weight: bold;
+}
+
+.comments {
+    margin: 0 0.7rem 0.7rem;
+}
+
+.comment {
+    margin-bottom: 0.7rem;
+}
+
+.input {
+    display: flex;
+    height: 3.7rem;
+    border-top: 0.5px solid lightgray;
+
+    & :focus {
+        outline: none;
+    }
+}
+
+.input-field {
+    border: 0;
+    flex-grow: 1;
+    margin: 1px;
+    padding: 0 1rem;
+}
+
+.submit-button {
+    border: none;
+    padding: 0 1.5rem;
+    background: none;
+    color: $color-azure-radiance;
+    font-weight: bold;
+    cursor: pointer;
+}

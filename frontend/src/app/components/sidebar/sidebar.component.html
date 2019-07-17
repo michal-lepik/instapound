@@ -1,0 +1,16 @@
+<div class="sidebar">
+    <div class="account">
+        <img class="avatar" src="{{ user.profilePicUrl }}" />
+
+        <div class="user">
+            <div class="username">{{ user.username }}</div>
+            <div class="name">{{ user.name }} {{ user.surname }}</div>
+        </div>
+    </div>
+
+    <div class="sidebar-tile">stories</div>
+    <div class="sidebar-tile">suggestions</div>
+    <div class="footer">
+        <li *ngFor="let item of footerItems">{{ item }}</li>
+    </div>
+</div>
