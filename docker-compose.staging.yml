@@ -5,6 +5,10 @@ services:
     build:
       dockerfile: Dockerfile
 
+  backend:
+    build:
+      dockerfile: Dockerfile
+
   nginx:
     ports:
       - 80:80
