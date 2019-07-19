@@ -6,9 +6,5 @@ import { Component } from '@angular/core';
     styleUrls: ['./header.component.scss'],
 })
 export class HeaderComponent {
-    private iconButtons = [
-        'assets/icons/compass.svg',
-        'assets/icons/heart.svg',
-        'assets/icons/user.svg',
-    ];
+    iconButtons = ['assets/icons/compass.svg', 'assets/icons/heart.svg', 'assets/icons/user.svg'];
 }

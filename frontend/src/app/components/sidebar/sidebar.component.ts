@@ -9,9 +9,9 @@ import { UsersService } from 'src/app/services/users.service';
     styleUrls: ['./sidebar.component.scss'],
 })
 export class SidebarComponent implements OnInit {
-    private user: User;
+    user: User;
 
-    private footerItems = [
+    footerItems = [
         'cupcake',
         'ipsum',
         'dolor',
