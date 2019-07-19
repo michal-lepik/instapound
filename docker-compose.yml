@@ -15,6 +15,12 @@ services:
       context: ./backend
     depends_on:
       - mongo
+    links:
+      - mongo
+    env_file:
+      - ./.env
+    environment:
+      WAIT_HOSTS: mongo:27017
 
   nginx:
     image: instapound_nginx
@@ -26,6 +32,7 @@ services:
     restart: unless-stopped
     depends_on:
       - frontend
+      - backend
 
   mongo:
     image: mongo
