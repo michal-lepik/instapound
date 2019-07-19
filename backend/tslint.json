@@ -35,6 +35,13 @@
         "object-literal-sort-keys": false,
         "ordered-imports": false,
         "quotemark": [true, "single"],
-        "trailing-comma": false
+        "trailing-comma": false,
+        "no-any": true,
+        "no-object-mutation": true,
+        "no-delete": true,
+        "no-loop-statement": true,
+        "no-throw": true,
+        "no-try": true,
+        "no-reject": true
     }
 }

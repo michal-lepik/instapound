@@ -10,17 +10,11 @@ services:
   backend:
     image: instapound_backend
     container_name: instapound-backend
-    restart: always
+    restart: unless-stopped
     build:
       context: ./backend
-    depends_on:
-      - mongo
-    links:
-      - mongo
     env_file:
       - ./.env
-    environment:
-      WAIT_HOSTS: mongo:27017
 
   nginx:
     image: instapound_nginx
@@ -33,12 +27,3 @@ services:
     depends_on:
       - frontend
       - backend
-
-  mongo:
-    image: mongo
-    container_name: instapound-mongo
-    restart: always
-    ports:
-      - 27017:27017
-    volumes:
-      - ./database:/data/db
