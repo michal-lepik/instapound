@@ -1,6 +1,21 @@
 version: "3.7"
 
 services:
+  database:
+    image: mysql:8.0
+    command: --default-authentication-plugin=mysql_native_password
+    container_name: instapound-database
+    restart: unless-stopped
+    environment:
+      MYSQL_DATABASE: ${MYSQL_DATABASE}
+      MYSQL_USER: ${MYSQL_USER}
+      MYSQL_PASSWORD: ${MYSQL_PASSWORD}
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
+    ports:
+      - ${DB_PORT}
+    volumes:
+      - ./database:/var/lib/data
+
   frontend:
     image: instapound_frontend
     container_name: instapound-frontend
@@ -15,6 +30,8 @@ services:
       context: ./backend
     env_file:
       - ./.env
+    depends_on:
+      - database
 
   nginx:
     image: instapound_nginx
