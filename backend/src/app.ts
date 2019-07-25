@@ -11,7 +11,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.listen(process.env.APP_PORT);
 
 createConnection(dbOptions)
-    .then(async connection => {
+    .then(connection => {
         console.log('Connected to DB');
     })
     .catch(error => console.log('TypeORM connection error: ', error));
