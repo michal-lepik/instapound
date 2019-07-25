@@ -4,13 +4,13 @@ WORKDIR /backend
 
 COPY ./package-lock.json ./
 COPY ./package.json ./
-COPY wait_for_db.sh wait_for_db.sh
 
 RUN npm install
 
 COPY . .
+COPY wait-for-it /usr/local/bin/
 
 RUN npm run tsc
-RUN chmod +x wait_for_db.sh
+RUN chmod +x /usr/local/bin/wait-for-it
 
-CMD npm run prod
+CMD wait-for-it ${DB_HOST}:${DB_PORT} && npm run prod
