@@ -13,10 +13,10 @@ import { CommentsService } from 'src/app/services/comments.service';
 export class PostTileComponent implements OnInit {
     @Input() post: Post;
 
-    private author: User;
-    private comments: Comment[];
+    author: User;
+    comments: Comment[];
 
-    private iconButtons = [
+    iconButtons = [
         'assets/icons/heart.svg',
         'assets/icons/comment.svg',
         'assets/icons/share.svg',

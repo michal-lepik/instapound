@@ -7,3 +7,10 @@ services:
     volumes:
       - ./frontend:/frontend:delegated
       - /frontend/node_modules
+
+  backend:
+    build:
+      dockerfile: dev.Dockerfile
+    volumes:
+      - ./backend:/backend:delegated
+      - /backend/node_modules
