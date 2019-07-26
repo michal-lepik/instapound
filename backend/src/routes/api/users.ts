@@ -11,4 +11,14 @@ router.get('/', async (req, res) => {
     res.json(users);
 });
 
+router.post('/', async (req, res) => {
+    const user = await userRepository.create(req.body);
+
+    const results = await userRepository.save(user).catch(err => {
+        res.status(400).json({ msg: `Error: ${err}` });
+    });
+
+    return res.send(results);
+});
+
 module.exports = router;
