@@ -6,23 +6,23 @@ import { User } from './User';
 @Entity()
 export class Post {
     @PrimaryGeneratedColumn()
-    id!: number;
+    id: number;
 
     @Column()
-    pictureUrl!: string;
+    pictureUrl: string;
 
     @Column({ nullable: true })
-    location!: string;
+    location: string;
 
     @Column()
-    likes!: number;
+    likes: number;
 
     @OneToMany(type => Comment, comment => comment.post)
-    comments!: Comment[];
+    comments: Comment[];
 
     @Column()
-    authorId!: number;
+    authorId: number;
     @ManyToOne(type => User, user => user.posts)
-    @JoinColumn({ name: 'authorId' })
-    author!: User;
+    @JoinColumn()
+    author: User;
 }

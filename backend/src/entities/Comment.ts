@@ -1,25 +1,25 @@
-import { Entity, Column, PrimaryGeneratedColumn, ManyToOne, JoinColumn } from 'typeorm';
+import { Entity, Column, PrimaryGeneratedColumn, ManyToOne, JoinColumn, BaseEntity } from 'typeorm';
 
 import { Post } from './Post';
 import { User } from './User';
 
 @Entity()
-export class Comment {
+export class Comment extends BaseEntity {
     @PrimaryGeneratedColumn()
-    id!: number;
+    id: number;
 
     @Column()
-    content!: string;
+    content: string;
 
     @Column()
-    authorId!: number;
+    authorId: number;
     @ManyToOne(type => User, user => user.comments)
-    @JoinColumn({ name: 'authorId' })
-    author!: User;
+    @JoinColumn()
+    author: User;
 
     @Column()
-    postId!: number;
+    postId: number;
     @ManyToOne(type => Post, post => post.comments)
-    @JoinColumn({ name: 'postId' })
-    post!: Post[];
+    @JoinColumn()
+    post: Post[];
 }
