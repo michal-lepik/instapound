@@ -9,6 +9,7 @@
         "downlevelIteration": true,
         "emitDecoratorMetadata": true,
         "experimentalDecorators": true,
+        "strictPropertyInitialization": false,
         "module": "commonjs",
         "moduleResolution": "node",
         "importHelpers": true,

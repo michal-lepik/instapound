@@ -9,13 +9,7 @@ export const posts: Post[] = [
         likes: 1532,
         comments: [1, 2],
     },
-    {
-        id: 3,
-        authorId: 3,
-        pictureUrl: 'https://picsum.photos/601/',
-        likes: 9,
-        comments: [3, 4],
-    },
+
     {
         id: 4,
         authorId: 4,
@@ -31,5 +25,12 @@ export const posts: Post[] = [
         location: 'Really nice place',
         likes: 140,
         comments: [6, 7],
+    },
+    {
+        id: 3,
+        authorId: 3,
+        pictureUrl: 'https://picsum.photos/601/',
+        likes: 9,
+        comments: [3, 4],
     },
 ];
