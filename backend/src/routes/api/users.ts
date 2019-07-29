@@ -11,6 +11,12 @@ router.get('/', async (req, res) => {
     res.json(users);
 });
 
+router.get('/:id', async (req, res) => {
+    const user = await userRepository.findOne(req.params.id);
+
+    user ? res.json(user) : res.status(404).json({ msg: 'No user found' });
+});
+
 router.post('/', async (req, res) => {
     const user = await userRepository.create(req.body);
 

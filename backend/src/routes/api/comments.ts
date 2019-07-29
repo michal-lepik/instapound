@@ -11,6 +11,12 @@ router.get('/', async (req, res) => {
     res.json(comments);
 });
 
+router.get('/:id', async (req, res) => {
+    const comment = await commentRepository.findOne(req.params.id);
+
+    comment ? res.json(comment) : res.status(404).json({ msg: 'No comment found' });
+});
+
 router.post('/', async (req, res) => {
     const comment = await commentRepository.create(req.body);
 
