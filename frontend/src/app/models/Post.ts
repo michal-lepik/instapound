@@ -4,12 +4,11 @@ export interface Post {
     pictureUrl: string;
     location?: string;
     likes: number;
-    comments: number[];
 }
 
 export interface Comment {
     id: number;
-    author: number;
+    authorId: number;
     content: string;
-    post: number;
+    postId: number;
 }

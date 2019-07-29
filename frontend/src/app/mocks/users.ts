@@ -1,3 +1,4 @@
+/* spell-checker: disable */
 import { User } from '../models/User';
 
 export const users: User[] = [
