@@ -17,6 +17,11 @@ router.get('/:id', async (req, res) => {
     comment ? res.json(comment) : res.status(404).json({ msg: 'No comment found' });
 });
 
+router.get('/post/:id', async (req, res) => {
+    const comments = await commentRepository.find({ postId: req.params.id });
+    res.json(comments);
+});
+
 router.post('/', async (req, res) => {
     const comment = await commentRepository.create(req.body);
 
