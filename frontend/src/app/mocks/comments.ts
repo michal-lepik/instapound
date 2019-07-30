@@ -1,5 +1,5 @@
 /* spell-checker: disable */
-import { Comment } from '../models/Post';
+import { Comment } from '../modules/comments/models/comment.model';
 
 export const comments: Comment[] = [
     {

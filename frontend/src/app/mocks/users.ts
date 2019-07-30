@@ -1,5 +1,5 @@
 /* spell-checker: disable */
-import { User } from '../models/User';
+import { User } from '../modules/users/models/user.model';
 
 export const users: User[] = [
     {

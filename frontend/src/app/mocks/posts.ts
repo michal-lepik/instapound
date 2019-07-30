@@ -1,5 +1,5 @@
 /* spell-checker: disable */
-import { Post } from '../models/Post';
+import { Post } from '../modules/posts/models/post.model';
 
 export const posts: Post[] = [
     {
