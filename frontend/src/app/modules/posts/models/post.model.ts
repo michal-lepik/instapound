@@ -5,10 +5,3 @@ export interface Post {
     location?: string;
     likes: number;
 }
-
-export interface Comment {
-    id: number;
-    authorId: number;
-    content: string;
-    postId: number;
-}

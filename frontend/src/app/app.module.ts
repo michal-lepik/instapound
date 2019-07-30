@@ -1,7 +1,14 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { HttpClientModule } from '@angular/common/http';
+import { StoreModule } from '@ngrx/store';
+import { StoreDevtoolsModule } from '@ngrx/store-devtools';
+import { EffectsModule } from '@ngrx/effects';
 
 import { AppRoutingModule } from './app-routing.module';
+import { CommentsModule } from './modules/comments/comments.module';
+import { PostsModule } from './modules/posts/posts.module';
+import { UsersModule } from './modules/users/users.module';
 
 import { AppComponent } from './app.component';
 import { HomeComponent } from './pages/home/home.component';
@@ -10,9 +17,7 @@ import { PostTileComponent } from './components/post-tile/post-tile.component';
 import { SidebarComponent } from './components/sidebar/sidebar.component';
 import { IconButtonComponent } from './components/icon-button/icon-button.component';
 
-import { CommentsService } from './services/comments.service';
-import { PostsService } from './services/posts.service';
-import { UsersService } from './services/users.service';
+import { environment } from '../environments/environment';
 
 @NgModule({
     declarations: [
@@ -23,8 +28,20 @@ import { UsersService } from './services/users.service';
         SidebarComponent,
         IconButtonComponent,
     ],
-    imports: [BrowserModule, AppRoutingModule],
-    providers: [CommentsService, PostsService, UsersService],
+    imports: [
+        BrowserModule,
+        AppRoutingModule,
+        HttpClientModule,
+        CommentsModule,
+        PostsModule,
+        UsersModule,
+        EffectsModule.forRoot([]),
+        StoreModule.forRoot({}),
+        StoreDevtoolsModule.instrument({
+            maxAge: 10,
+            logOnly: environment.production,
+        }),
+    ],
     bootstrap: [AppComponent],
 })
 export class AppModule {}
